@@ -1,2 +1,28 @@
-<!-- Add the Auth0 script tag -->
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to Arteon Records</title>
+</head>
+<body>
+  <h1>Authentication</h1>
+  <p>Welcome to my GitHub Pages website.</p>
+
+
+
+  <script>
+  const auth0 = new auth0.WebAuth({
+    domain: 'thearteon.us.auth0.com',
+    clientID: 'PMhPszk5hlKNhTZackvavQmwYB1BYUv0',
+    redirectUri: 'https://arteon.github.io/auth/success.html', // Replace with your GitHub Pages success page URL
+    responseType: 'token id_token',
+  });
+</script>
+
+<button onclick="auth0.authorize()">Login with Auth0</button>
+
+  <!-- Add the Auth0 script tag -->
 <script src="https://cdn.auth0.com/js/auth0/1.17.0.auth0.min.js"></script>
+
+</body>
+</html>
