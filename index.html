@@ -7,19 +7,19 @@
   <h1>Authentication</h1>
   <p>Welcome to my GitHub Pages website.</p>
 
-  <!-- Move the Auth0 SDK script here -->
-  <script src="https://cdn.auth0.com/js/auth0/9.16.2.auth0.min.js"></script>
+  <!-- Add the Auth0 script tag before any other scripts -->
+  <script src="https://cdn.auth0.com/js/auth0/9.16.2/auth0.min.js"></script>
 
   <script>
     const auth0 = new auth0.WebAuth({
       domain: 'thearteon.us.auth0.com',
-      clientID: 'PMhPszk5hlKNhTZackvavQmwYB1BYUv0',
+      clientID: 'YOUR_AUTH0_CLIENT_ID', // Replace this with your actual Auth0 client ID
       redirectUri: 'https://arteon.github.io/auth/success.html', // Replace with your GitHub Pages success page URL
-      responseType: 'token 36000',
+      responseType: 'token id_token',
     });
   </script>
 
-  <!-- Move the login button here -->
+  <!-- Add the login button after the Auth0 SDK and initialization script -->
   <button onclick="auth0.authorize()">Login with Auth0</button>
 </body>
 </html>
